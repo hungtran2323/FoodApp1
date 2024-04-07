@@ -15,7 +15,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <ImageView
-                    android:src="@tools:sample/avatars"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/imageView" app:srcCompat="@drawable/logo"
                     android:layout_marginTop="48dp"/>
@@ -118,17 +118,17 @@
                     android:layout_height="match_parent">
 
                 <ImageView
-                        android:src="@tools:sample/avatars"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/FaceBook" android:layout_weight="1"
                         app:srcCompat="@drawable/facebook"/>
                 <ImageView
-                        android:src="@tools:sample/avatars"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/Google" android:layout_weight="1"
                         app:srcCompat="@drawable/google"/>
                 <ImageView
-                        android:src="@tools:sample/avatars"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" android:id="@+id/Twitter" android:layout_weight="1"
                         app:srcCompat="@drawable/twitter"/>
