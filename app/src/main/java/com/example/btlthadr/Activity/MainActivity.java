@@ -102,7 +102,7 @@ public class MainActivity extends BaseActivity {
     }
     private void initLocation() {
         DatabaseReference myRef= database.getReference("Location");
-        ArrayList<Location> list= new ArrayList<Location>();
+        ArrayList<Location> list= new ArrayList<>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
