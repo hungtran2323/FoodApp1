@@ -30,21 +30,6 @@
             app:layout_constraintTop_toBottomOf="@+id/pic"
             app:layout_constraintVertical_bias="1.0">
 
-            <TextView
-                android:id="@+id/titleTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="title"
-                android:textColor="@color/blue"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toStartOf="@+id/priceTxt"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <!--<TextView
                 android:id="@+id/starTxt"
                 android:layout_width="wrap_content"
@@ -67,7 +52,7 @@
                 app:layout_constraintTop_toTopOf="@+id/starTxt"
                 app:layout_constraintVertical_bias="0.181" />-->
 
-            <TextView
+            <!--<TextView
                 android:id="@+id/textView15"
                 android:layout_width="44dp"
                 android:layout_height="39dp"
@@ -78,7 +63,7 @@
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
-
+-->
             <!--<TextView
                 android:id="@+id/timeTxt"
                 android:layout_width="wrap_content"
@@ -103,6 +88,20 @@
                 app:srcCompat="@drawable/time" />-->
 
             <TextView
+                android:id="@+id/titleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="title"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:id="@+id/priceTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -112,7 +111,7 @@
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.108"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titleTxt"
                 app:layout_constraintVertical_bias="1.0" />
