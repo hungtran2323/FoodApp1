@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
 
 
         initLocation();
-        initTime();
+        //initTime();
         initPrice();
         initBestFood();
         initCategory();
@@ -123,7 +123,7 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    private void initTime() {
+    /*private void initTime() {
         DatabaseReference myRef= database.getReference("Time");
         ArrayList<Time> list= new ArrayList<>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -144,7 +144,7 @@ public class MainActivity extends BaseActivity {
 
             }
         });
-    }
+    }*/
 
     private void initPrice() {
         DatabaseReference myRef= database.getReference("Price");

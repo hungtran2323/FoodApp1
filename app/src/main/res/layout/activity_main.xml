@@ -36,7 +36,7 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Alex Johnson"
+                    android:text="Nhom 21"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -150,7 +150,7 @@
                         android:background="@null" />
                 </LinearLayout>
 
-                <LinearLayout
+                <!--<LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="4dp"
@@ -174,7 +174,7 @@
                         android:layout_marginStart="4dp"
                         android:layout_weight="1"
                         android:background="@null" />
-                </LinearLayout>
+                </LinearLayout>-->
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -216,18 +216,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Today's best Foods"
+                    android:text="Today's Foods"
                     android:textColor="@color/blue"
                     android:textSize="22dp"
                     android:textStyle="bold"
                     />
 
-                <TextView
+                <!--<TextView
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/red"
-                    android:text="VIEW ALL" />
+                    android:text="VIEW ALL" />-->
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -263,7 +263,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Choose Category"
+                android:text="Category"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/blue"
                 android:textSize="22dp"
