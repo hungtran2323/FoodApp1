@@ -1,4 +1,4 @@
-package com.example.btlthadr.Activity.Domain;
+package com.example.btlthadr.Domain;
 
 public class Location {
     private int Id;

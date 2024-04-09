@@ -2,10 +2,7 @@ package com.example.btlthadr.Activity;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.view.View;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.btlthadr.Activity.BaseActivity;
 import com.example.btlthadr.databinding.ActivityIntroBinding;
 
 public class IntroActivity extends BaseActivity {

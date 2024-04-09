@@ -1,17 +1,9 @@
 package com.example.btlthadr.Activity;
 
 import android.content.Intent;
-import android.view.View;
 import android.widget.Toast;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.btlthadr.R;
 import com.example.btlthadr.databinding.ActivityLoginBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import org.jetbrains.annotations.NotNull;
 
 public class LoginActivity extends BaseActivity {
     ActivityLoginBinding binding;

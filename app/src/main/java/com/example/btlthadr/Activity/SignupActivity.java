@@ -2,15 +2,10 @@ package com.example.btlthadr.Activity;
 
 import android.content.Intent;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import com.example.btlthadr.R;
 import com.example.btlthadr.databinding.ActivitySignupBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.firebase.auth.AuthResult;
+
 public class SignupActivity extends BaseActivity {
     ActivitySignupBinding binding;
     private  String TAG;

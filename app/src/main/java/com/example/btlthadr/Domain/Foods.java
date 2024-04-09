@@ -1,6 +1,8 @@
-package com.example.btlthadr.Activity.Domain;
+package com.example.btlthadr.Domain;
 
-public class Foods {
+import java.io.Serializable;
+
+public class Foods implements Serializable {
     private int CategoryId;
     private String Description;
     private boolean BestFood;
