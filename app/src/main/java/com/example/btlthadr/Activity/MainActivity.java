@@ -54,6 +54,7 @@ public class MainActivity extends BaseActivity {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(MainActivity.this, LoginActivity.class));
         });
+
         binding.searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,7 +67,10 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
+
+        binding.cartBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this,CartActivity.class)));
     }
+
 
     private void initBestFood(){
        DatabaseReference myRef= database.getReference("Foods");
