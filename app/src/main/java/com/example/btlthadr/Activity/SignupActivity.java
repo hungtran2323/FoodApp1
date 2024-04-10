@@ -9,7 +9,6 @@ import com.example.btlthadr.databinding.ActivitySignupBinding;
 
 public class SignupActivity extends BaseActivity {
     ActivitySignupBinding binding;
-    private String TAG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +27,21 @@ public class SignupActivity extends BaseActivity {
                 Toast.makeText(SignupActivity.this, "Your password must be 6 character", Toast.LENGTH_SHORT).show();
                 return;
             }
-            mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(SignupActivity.this, task -> {
-                if (task.isSuccessful()) {
-                    Log.i(TAG, "onComplete: ");
-                    startActivity(new Intent(SignupActivity.this, MainActivity.class));
+            mAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(SignupActivity.this, task -> {
+                        if (task.isSuccessful()) {
+                            startActivity(new Intent(SignupActivity.this, MainActivity.class));
 
-                } else {
-                    Log.i(TAG, "failure: " + task.getException());
-                    Toast.makeText(SignupActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(SignupActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
 
-                }
-            });
+                        }
+                    });
 
+        });
+
+        binding.signinLabel.setOnClickListener(v -> {
+            startActivity(new Intent(this, LoginActivity.class));
         });
     }
 }
