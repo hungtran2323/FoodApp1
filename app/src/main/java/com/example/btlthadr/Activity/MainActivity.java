@@ -107,7 +107,7 @@ public class MainActivity extends BaseActivity {
                 if(snapshot.exists()){
                     for(DataSnapshot issue: snapshot.getChildren()){
                         list.add(issue.getValue(Category.class));
-                        Log.d("111", issue.getValue(Category.class).getName() + issue.getValue(Category.class).getId());
+                        //Log.d("111", issue.getValue(Category.class).getName() + issue.getValue(Category.class).getId());
                     }
                     if(list.size()>0){
                         binding.categoryView.setLayoutManager(new GridLayoutManager(MainActivity.this,4));
