@@ -53,19 +53,19 @@ public class MainActivity extends BaseActivity {
     private void setVariable() {
         binding.logoutBtn.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            Intent it = new Intent(this, LoginActivity.class);
+            it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(it);
+            finish();
         });
 
-        binding.searchBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String text = binding.searchEdt.getText().toString();
-                if (!text.isEmpty()) {
-                    Intent i = new Intent(MainActivity.this, ListFoodsActivity.class);
-                    i.putExtra("text", text);
-                    i.putExtra("isSearch", true);
-                    startActivity(i);
-                }
+        binding.searchBtn.setOnClickListener(v -> {
+            String text = binding.searchEdt.getText().toString();
+            if (!text.isEmpty()) {
+                Intent i = new Intent(MainActivity.this, ListFoodsActivity.class);
+                i.putExtra("text", text);
+                i.putExtra("isSearch", true);
+                startActivity(i);
             }
         });
 

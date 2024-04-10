@@ -28,16 +28,13 @@ public class SignupActivity extends BaseActivity {
                 return;
             }
             mAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(SignupActivity.this, task -> {
-                        if (task.isSuccessful()) {
-                            startActivity(new Intent(SignupActivity.this, MainActivity.class));
-
-                        } else {
-                            Toast.makeText(SignupActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
-
-                        }
+                    .addOnSuccessListener(suc -> {
+                        startActivity(new Intent(this, MainActivity.class));
+                        finish();
+                    })
+                    .addOnFailureListener(f -> {
+                        Toast.makeText(this, "Authentication failed", Toast.LENGTH_SHORT).show();
                     });
-
         });
 
         binding.signinLabel.setOnClickListener(v -> {
