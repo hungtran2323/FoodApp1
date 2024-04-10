@@ -1,6 +1,7 @@
 package com.example.btlthadr.Activity;
 
 import android.content.Intent;
+import android.view.View;
 import android.widget.Toast;
 import android.os.Bundle;
 
@@ -21,16 +22,18 @@ public class LoginActivity extends BaseActivity {
         binding.loginBtn.setOnClickListener(v -> {
             String email = binding.userEdit.getText().toString();
             String password = binding.passEdit.getText().toString();
+            binding.loadingPanel.setVisibility(View.VISIBLE);
             if (!email.isEmpty() && !password.isEmpty()) {
-                mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(LoginActivity.this, task -> {
-                    if (task.isSuccessful()) {
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-
+                mAuth.signInWithEmailAndPassword(email, password)
+                        .addOnSuccessListener(s -> {
+                            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                        })
+                        .addOnFailureListener(e -> {
+                            Toast.makeText(LoginActivity.this, "Authentication failed", Toast.LENGTH_SHORT).show();
+                        })
+                        .addOnCompleteListener(f -> {
+                            binding.loadingPanel.setVisibility(View.GONE);
+                        });
             } else {
                 Toast.makeText(LoginActivity.this, "Please fill username and password ", Toast.LENGTH_SHORT).show();
             }
