@@ -44,9 +44,9 @@ public class MainActivity extends BaseActivity {
         setContentView(binding.getRoot());
         managmentCart = new ManagmentCart(getApplicationContext());
 
-        initLocation();
+        //initLocation();
         //initTime();
-        initPrice();
+        //initPrice();
         initBestFood();
         initCategory();
         setVariable();
@@ -134,7 +134,7 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-    private void initLocation() {
+    /*private void initLocation() {
         DatabaseReference myRef = database.getReference("Location");
         ArrayList<Location> list = new ArrayList<>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -155,7 +155,7 @@ public class MainActivity extends BaseActivity {
 
             }
         });
-    }
+    }*/
 
     /*private void initTime() {
         DatabaseReference myRef= database.getReference("Time");
@@ -180,7 +180,7 @@ public class MainActivity extends BaseActivity {
         });
     }*/
 
-    private void initPrice() {
+    /*private void initPrice() {
         DatabaseReference myRef = database.getReference("Price");
         ArrayList<Price> list = new ArrayList<>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -201,7 +201,7 @@ public class MainActivity extends BaseActivity {
 
             }
         });
-    }
+    }*/
 
 
 }
