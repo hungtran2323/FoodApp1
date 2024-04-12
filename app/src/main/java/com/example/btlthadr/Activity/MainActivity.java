@@ -19,6 +19,7 @@ import com.example.btlthadr.Domain.Foods;
 import com.example.btlthadr.Domain.Location;
 import com.example.btlthadr.Domain.Price;
 import com.example.btlthadr.Domain.Time;
+import com.example.btlthadr.Helper.ManagmentCart;
 import com.example.btlthadr.R;
 import com.example.btlthadr.databinding.ActivityMainBinding;
 import com.google.firebase.Firebase;
@@ -34,13 +35,14 @@ import java.util.ArrayList;
 public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding binding;
+    ManagmentCart managmentCart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        managmentCart = new ManagmentCart(getApplicationContext());
 
         initLocation();
         //initTime();
@@ -55,6 +57,8 @@ public class MainActivity extends BaseActivity {
             FirebaseAuth.getInstance().signOut();
             Intent it = new Intent(this, LoginActivity.class);
             it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            managmentCart.clearAll();
+
             startActivity(it);
             finish();
         });
